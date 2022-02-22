@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.CompleteBookingActivity"
+    android:background="@color/white_secondary"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            style="@style/TextViewPrimaryBlack.SemiBold"
+            android:layout_gravity="center_horizontal"
+            android:text="Complete Booking"
+            android:textSize="16sp" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextViewPrimaryBlack.SemiBold"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="36dp"
+        android:text="Personal Information"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_component_search"
+        app:layout_constraintEnd_toEndOf="@id/constraintLayout7"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout7"
+        app:layout_constraintTop_toBottomOf="@+id/textview22">
+
+        <TextView
+            android:id="@+id/tv_bus_name"
+            style="@style/TextViewBlue"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/sempati_star"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_plat"
+            style="@style/TextViewSecondaryBlack.Regular"
+            android:layout_marginStart="14dp"
+            android:text="P 1923 NM"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_bus_name"
+            app:layout_constraintStart_toEndOf="@id/tv_bus_name"
+            app:layout_constraintTop_toTopOf="@id/tv_bus_name" />
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            style="@style/TextViewPrimaryBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="17:00"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_bus_name"
+            app:layout_constraintTop_toBottomOf="@+id/tv_bus_name" />
+
+        <TextView
+            android:id="@+id/tv_name_terminal"
+            style="@style/TextViewSecondaryBlack.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:text="@string/terminal_amplas"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_start_time"
+            app:layout_constraintStart_toEndOf="@id/tv_start_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_start_time" />
+
+        <TextView
+            android:id="@+id/tv_terminal_location"
+            style="@style/TextViewSecondaryBlack.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medan"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_terminal"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@id/tv_name_terminal"
+            app:layout_constraintTop_toBottomOf="@id/tv_name_terminal" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            style="@style/TextViewPrimaryBlack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="17:00"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_start_time"
+            app:layout_constraintTop_toBottomOf="@+id/tv_terminal_location" />
+
+        <TextView
+            android:id="@+id/tv_name_terminal_end"
+            style="@style/TextViewSecondaryBlack.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="21dp"
+            android:text="@string/terminal_amplas"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_end_time"
+            app:layout_constraintStart_toEndOf="@+id/tv_end_time"
+            app:layout_constraintTop_toTopOf="@+id/tv_end_time" />
+
+        <TextView
+            android:id="@+id/tv_terminal_location_end"
+            style="@style/TextViewSecondaryBlack.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/medan"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_name_terminal_end"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_name_terminal_end"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name_terminal_end" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="23dp"
+            android:background="@color/text_grey_third"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_terminal_location_end" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/bg_rating"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_plat"
+            app:layout_constraintTop_toTopOf="@+id/tv_plat">
+
+            <ImageView
+                android:id="@+id/img_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/ic_star"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_rating"
+                style="@style/TextViewPrimaryYellow"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="9dp"
+                android:text="4.9/5"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_rating" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_reviewers"
+            style="@style/TextViewSecondaryGrey"
+            android:layout_marginTop="10dp"
+            android:gravity="end"
+            android:text="120\nReviewers"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toTopOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout6"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tv_plat"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout6"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            style="@style/TextViewBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="15dp"
+            android:text="Rp166.000,00"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+        <TextView
+            android:id="@+id/tv_per_seat"
+            style="@style/TextViewPrimaryBlack.Regular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="14dp"
+            android:text="/seat"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/tv_price"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tv_price"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_row_left" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/bg_component_search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/TextViewSecondaryGrey.Regular"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="15dp"
+            android:text="Name"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextViewPrimaryBlack.SemiBold"
+            android:text="Samsul Aripin"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/text_grey_third"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_row_left" />
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/TextViewSecondaryGrey.Regular"
+            android:layout_marginTop="10dp"
+            android:text="Phone number"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/view1" />
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            style="@style/TextViewPrimaryBlack.SemiBold"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:text="082230512197"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@id/textView5" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textview22"
+        style="@style/TextViewPrimaryBlack.SemiBold"
+        android:layout_marginStart="44dp"
+        android:text="Payment Method"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout7" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

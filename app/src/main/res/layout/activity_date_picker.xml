@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:calendar="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".utils.DatePicker"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/image_back"
+            />
+        <TextView
+            android:id="@+id/tv_title_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/departure_date_toolbar"
+            android:textSize="16sp"
+            android:textColor="@color/text_black_primary"
+            android:fontFamily="@font/nunito_bold"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/departure_date"
+            />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/round_yellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_round_yellow"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_date"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="34dp"
+        />
+    <TextView
+        android:id="@+id/tv_best_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/best_price"
+        android:textSize="12sp"
+        android:fontFamily="@font/nunito_regular"
+        android:textColor="@color/text_grey_secondary"
+        app:layout_constraintStart_toEndOf="@id/round_yellow"
+        app:layout_constraintTop_toTopOf="@id/round_yellow"
+        app:layout_constraintBottom_toBottomOf="@id/round_yellow"
+        android:layout_marginStart="6dp"
+        />
+
+    <ImageView
+        android:id="@+id/round_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/ic_round_red"
+        app:layout_constraintBottom_toBottomOf="@+id/round_yellow"
+        app:layout_constraintStart_toEndOf="@+id/tv_best_price"
+        app:layout_constraintTop_toTopOf="@id/round_yellow" />
+
+    <TextView
+        android:id="@+id/tv_most_booked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="@string/most_booked"
+        android:textColor="@color/text_grey_secondary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/round_red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/round_red"
+        app:layout_constraintTop_toTopOf="@+id/round_red"
+        />
+
+    <CalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_best_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        />
+
+
+    <TextView
+        android:id="@+id/tv_date_departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tue, 23 July"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:fontFamily="@font/nunito_bold"
+        android:textSize="16sp"
+        android:textColor="@color/blue_secondary"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="29dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:fontFamily="@font/nunito_regular"
+        android:text="Departure"
+        android:textColor="@color/text_black_primary"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@id/tv_date_departure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/calendar_view"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="@string/select_date"
+        android:lineSpacingExtra="8sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_date_departure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_date_departure"
+        app:layout_constraintTop_toTopOf="@id/tv_departure"
+        android:paddingStart="33dp"
+        android:paddingEnd="33dp"
+        android:background="@drawable/bg_button"
+        android:textColor="@color/white_primary"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

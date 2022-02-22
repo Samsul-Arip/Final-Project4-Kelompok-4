@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LoginActivity">
+
+    <ImageView
+        android:id="@+id/image_ilustration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_illustration_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="64dp"
+        />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        style="@style/TextViewPrimaryBlack.SemiBold"
+        android:textSize="22sp"
+        app:layout_constraintTop_toBottomOf="@id/image_ilustration"
+        android:text="@string/welcome"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_description_login"
+        style="@style/TextViewSecondaryGrey.Regular"
+        android:text="@string/description_login"
+        app:layout_constraintStart_toStartOf="@id/tvWelcome"
+        app:layout_constraintEnd_toEndOf="@id/tvWelcome"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:layout_marginTop="20dp"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint_signup"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/bg_login_google"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_login"
+        app:layout_constraintVertical_bias="1.0">
+
+
+        <ImageView
+            android:id="@+id/image_google"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_google"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="28dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_up_google"
+            style="@style/TextViewSecondaryBlack.SemiBold"
+            android:layout_marginStart="54dp"
+            android:text="@string/sign_up_with_google"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/image_google"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

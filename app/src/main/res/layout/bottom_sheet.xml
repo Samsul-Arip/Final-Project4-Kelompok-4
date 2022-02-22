@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <View
+            android:id="@+id/view_top"
+            android:layout_width="93dp"
+            android:layout_height="4dp"
+            android:background="@color/text_grey_third"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextViewPrimaryBlack"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="34dp"
+            android:text="@string/select_how_much_passangers"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_top"
+            />
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/TextViewSecondaryGrey.Light"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="34dp"
+            android:text="@string/older_than_2_years_old_should_buy_a_seat"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            tools:ignore="TextContrastCheck"
+            />
+
+        <TextView
+            android:id="@+id/tv_count"
+            style="@style/TextViewBlue"
+            android:text="0"
+            android:textSize="36sp"
+            app:layout_constraintTop_toBottomOf="@id/tv_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_title_count"
+            style="@style/TextViewPrimaryBlack"
+            android:layout_marginStart="34dp"
+            android:layout_marginEnd="34dp"
+            android:text="@string/passangers"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_count"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/slider_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tv_title_count"
+            android:layout_marginStart="56dp"
+            android:layout_marginEnd="47dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            android:contentDescription="@string/slider_range"
+            android:valueFrom="0.0"
+            android:valueTo="10.0"
+            android:stepSize="1.0"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            style="@style/ButtonPrimary.Grey"
+            android:layout_marginStart="34dp"
+            android:layout_marginTop="55dp"
+            android:layout_marginEnd="9dp"
+            android:background="@drawable/bg_button_cancel"
+            android:text="@string/cancel"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/slider_count" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_select"
+            style="@style/ButtonPrimary"
+            android:layout_marginStart="9dp"
+            android:layout_marginEnd="34dp"
+            app:layout_constraintBottom_toBottomOf="@+id/btn_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_cancel"
+            app:layout_constraintTop_toTopOf="@id/btn_cancel"
+            android:background="@drawable/bg_button"
+            android:text="@string/select"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
