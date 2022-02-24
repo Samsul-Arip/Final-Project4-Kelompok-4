@@ -16,6 +16,8 @@ import com.samsul.finalproject4_kelompok4.utils.Constant;
 import com.samsul.finalproject4_kelompok4.utils.ViewModelFactory;
 
 import java.util.Objects;
+import java.util.Random;
+import java.util.UUID;
 
 public class CompleteBookingActivity extends AppCompatActivity {
 
@@ -48,7 +50,12 @@ public class CompleteBookingActivity extends AppCompatActivity {
 
 
         String name = Objects.requireNonNull(auth.getCurrentUser()).getDisplayName();
-        String id = Objects.requireNonNull(auth.getCurrentUser()).getUid();
+
+        Random ran = new Random();
+        int idBus = ran.nextInt(6) + 5;
+
+        UUID uuid= UUID.randomUUID();
+
         viewModel.getUser().observe(this, users -> {
             if(users != null) {
                 binding.tvPhoneNumber.setText(String.valueOf(users.getNo()));
@@ -68,7 +75,7 @@ public class CompleteBookingActivity extends AppCompatActivity {
 
         binding.button.setOnClickListener(view -> {
             Bus bus = new Bus();
-            bus.setId(id);
+            bus.setId("No Bus. " + uuid);
             bus.setBusName(busName);
             bus.setStartTime(startTime);
             bus.setEndTime(endTime);

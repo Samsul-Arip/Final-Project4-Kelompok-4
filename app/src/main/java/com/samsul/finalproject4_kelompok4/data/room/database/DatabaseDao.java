@@ -18,7 +18,7 @@ public interface DatabaseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertUser(Users users);
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertBus(Bus bus);
 
     @Query("SELECT * FROM bus_table")
