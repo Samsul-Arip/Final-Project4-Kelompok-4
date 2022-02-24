@@ -43,6 +43,14 @@ public class ResponseBus {
         this.imageBus = imageBus;
     }
 
+    public String getImageBus() {
+        return imageBus;
+    }
+
+    public void setImageBus(String imageBus) {
+        this.imageBus = imageBus;
+    }
+
     public int getIdBus() {
         return idBus;
     }

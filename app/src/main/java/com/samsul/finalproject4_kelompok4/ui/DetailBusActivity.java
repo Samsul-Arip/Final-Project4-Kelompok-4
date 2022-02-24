@@ -42,13 +42,17 @@ public class DetailBusActivity extends AppCompatActivity {
                                 item.getStartTime(),
                                 item.getEndTime(),
                                 item.getTotalTime(),
-                                "",
+                                item.getBusClass(),
                                 seat,
                                 item.getPrince()
                                 );
                     }
                 }
             }
+        });
+
+        binding.btnBookNow.setOnClickListener(view -> {
+            startActivity(new Intent(this, SeatActivity.class));
         });
 
     }
