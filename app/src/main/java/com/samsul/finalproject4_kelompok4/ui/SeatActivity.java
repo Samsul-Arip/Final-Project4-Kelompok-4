@@ -92,10 +92,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick4 += 1;
             for(int data = 0; data <= totalClick4; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view4.setBackgroundResource(R.drawable.bg_seat_off);
                     seat4 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view4.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -103,10 +103,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick5 += 1;
             for(int data = 0; data <= totalClick5; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view5.setBackgroundResource(R.drawable.bg_seat_off);
                     seat5 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view5.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -114,10 +114,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick6 += 1;
             for(int data = 0; data <= totalClick6; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view6.setBackgroundResource(R.drawable.bg_seat_off);
                     seat6 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view6.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -125,10 +125,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick7 += 1;
             for(int data = 0; data <= totalClick7; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view7.setBackgroundResource(R.drawable.bg_seat_off);
                     seat7 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view7.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -136,10 +136,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick8 += 1;
             for(int data = 0; data <= totalClick8; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view8.setBackgroundResource(R.drawable.bg_seat_off);
                     seat3 = 8;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view8.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -147,10 +147,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick9 += 1;
             for(int data = 0; data <= totalClick9; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view9.setBackgroundResource(R.drawable.bg_seat_off);
                     seat9 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view9.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -158,10 +158,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick10 += 1;
             for(int data = 0; data <= totalClick10; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view10.setBackgroundResource(R.drawable.bg_seat_off);
                     seat10 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view10.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -169,10 +169,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick11 += 1;
             for(int data = 0; data <= totalClick11; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view11.setBackgroundResource(R.drawable.bg_seat_off);
                     seat11 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view11.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -180,10 +180,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick12 += 1;
             for(int data = 0; data <= totalClick12; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view12.setBackgroundResource(R.drawable.bg_seat_off);
                     seat12 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view12.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -191,10 +191,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick13 += 1;
             for(int data = 0; data <= totalClick13; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view13.setBackgroundResource(R.drawable.bg_seat_off);
                     seat13 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view13.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -202,10 +202,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick14 += 1;
             for(int data = 0; data <= totalClick14; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view14.setBackgroundResource(R.drawable.bg_seat_off);
                     seat14 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view14.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -213,10 +213,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick15 += 1;
             for(int data = 0; data <= totalClick15; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view5.setBackgroundResource(R.drawable.bg_seat_off);
                     seat15 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view5.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -224,10 +224,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick16 += 1;
             for(int data = 0; data <= totalClick16; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view16.setBackgroundResource(R.drawable.bg_seat_off);
                     seat16 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view16.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -235,10 +235,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick17 += 1;
             for(int data = 0; data <= totalClick17; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view17.setBackgroundResource(R.drawable.bg_seat_off);
                     seat17 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view17.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -246,10 +246,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick18 += 1;
             for(int data = 0; data <= totalClick18; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view18.setBackgroundResource(R.drawable.bg_seat_off);
                     seat18 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view18.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -257,10 +257,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick19 += 1;
             for(int data = 0; data <= totalClick19; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view19.setBackgroundResource(R.drawable.bg_seat_off);
                     seat19 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view19.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -268,10 +268,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick20 += 1;
             for(int data = 0; data <= totalClick22; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view20.setBackgroundResource(R.drawable.bg_seat_off);
                     seat20 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view20.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -279,10 +279,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick21 += 1;
             for(int data = 0; data <= totalClick21; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view21.setBackgroundResource(R.drawable.bg_seat_off);
                     seat21 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view21.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -290,10 +290,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick22 += 1;
             for(int data = 0; data <= totalClick22; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view22.setBackgroundResource(R.drawable.bg_seat_off);
                     seat22 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view22.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -301,10 +301,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick23 += 1;
             for(int data = 0; data <= totalClick23; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view23.setBackgroundResource(R.drawable.bg_seat_off);
                     seat23 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view23.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -312,10 +312,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick24 += 1;
             for(int data = 0; data <= totalClick24; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view24.setBackgroundResource(R.drawable.bg_seat_off);
                     seat24 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view24.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -323,10 +323,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick25 += 1;
             for(int data = 0; data <= totalClick25; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view25.setBackgroundResource(R.drawable.bg_seat_off);
                     seat25 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view25.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -334,10 +334,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick26 += 1;
             for(int data = 0; data <= totalClick26; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view26.setBackgroundResource(R.drawable.bg_seat_off);
                     seat26 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view26.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -345,10 +345,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick27 += 1;
             for(int data = 0; data <= totalClick27; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view27.setBackgroundResource(R.drawable.bg_seat_off);
                     seat27 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view27.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -356,10 +356,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick28 += 1;
             for(int data = 0; data <= totalClick28; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view28.setBackgroundResource(R.drawable.bg_seat_off);
                     seat28 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view28.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -367,10 +367,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick29 += 1;
             for(int data = 0; data <= totalClick29; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view29.setBackgroundResource(R.drawable.bg_seat_off);
                     seat29 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view29.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -378,10 +378,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick30 += 1;
             for(int data = 0; data <= totalClick30; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view30.setBackgroundResource(R.drawable.bg_seat_off);
                     seat30 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view30.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });
@@ -389,10 +389,10 @@ public class SeatActivity extends AppCompatActivity {
             totalClick31 += 1;
             for(int data = 0; data <= totalClick31; data++) {
                 if(data % 2 == 0) {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_off);
+                    binding.view31.setBackgroundResource(R.drawable.bg_seat_off);
                     seat31 = 1;
                 } else {
-                    binding.view1.setBackgroundResource(R.drawable.bg_seat_on);
+                    binding.view31.setBackgroundResource(R.drawable.bg_seat_on);
                 }
             }
         });

@@ -21,7 +21,7 @@ public interface DatabaseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertBus(Bus bus);
 
-    @Query("SELECT * FROM bus_table ORDER BY id ASC")
+    @Query("SELECT * FROM bus_table")
     LiveData<List<Bus>> getBus();
 
 //    @Query("SELECT * FROM bus_table WHERE id = id")
