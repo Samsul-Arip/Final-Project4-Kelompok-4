@@ -54,8 +54,6 @@ public class CompleteBookingActivity extends AppCompatActivity {
         Random ran = new Random();
         int idBus = ran.nextInt(6) + 5;
 
-        UUID uuid= UUID.randomUUID();
-
         viewModel.getUser().observe(this, users -> {
             if(users != null) {
                 binding.tvPhoneNumber.setText(String.valueOf(users.getNo()));
@@ -75,7 +73,7 @@ public class CompleteBookingActivity extends AppCompatActivity {
 
         binding.button.setOnClickListener(view -> {
             Bus bus = new Bus();
-            bus.setId("No Bus. " + uuid);
+            bus.setId("No Bus. " + idBus + "JL I 0" + idBus);
             bus.setBusName(busName);
             bus.setStartTime(startTime);
             bus.setEndTime(endTime);

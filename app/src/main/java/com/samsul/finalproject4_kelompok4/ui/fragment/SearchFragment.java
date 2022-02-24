@@ -95,7 +95,6 @@ public class SearchFragment extends Fragment implements BottomSheet.FragmentList
         if(getActivity() != null) {
             String departure = preferences.getSharedPreferences().getString(Constant.NAME_DEPARTURE, "Select Departure");
             String terminal = preferences.getSharedPreferences().getString(Constant.NAME_TERMINAL_DEPARTURE, "");
-
             String arrival = preferences.getSharedPreferences().getString(Constant.NAME_ARRIVAL, "Select Arrival");
             String terminalArrival = preferences.getSharedPreferences().getString(Constant.NAME_TERMINAL_ARRIVAL, "");
 

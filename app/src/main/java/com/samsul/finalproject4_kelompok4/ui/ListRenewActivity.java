@@ -12,6 +12,7 @@ import android.os.Bundle;
 import com.samsul.finalproject4_kelompok4.adapter.ListRenewAdapter;
 import com.samsul.finalproject4_kelompok4.adapter.OrderAdapter;
 import com.samsul.finalproject4_kelompok4.data.ResponseOrder;
+import com.samsul.finalproject4_kelompok4.data.remote.model.ResponseBus;
 import com.samsul.finalproject4_kelompok4.databinding.ActivityListRenewBinding;
 import com.samsul.finalproject4_kelompok4.ui.viewmodel.BusViewModel;
 import com.samsul.finalproject4_kelompok4.utils.Constant;
@@ -52,6 +53,18 @@ public class ListRenewActivity extends AppCompatActivity {
         binding.rvSearchBus.setHasFixedSize(true);
         binding.rvSearchBus.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         binding.rvSearchBus.setAdapter(adapter);
+
+        adapter.setOnItemClickListener(new ListRenewAdapter.ItemClickListener() {
+            @Override
+            public void setClicked(ResponseBus bus) {
+                Intent intent = new Intent(ListRenewActivity.this, DetailBusActivity.class);
+                intent.putExtra(Constant.ID, bus.getIdBus());
+                intent.putExtra(Constant.NAME_DEPARTURE, bus.getStartLocation());
+                intent.putExtra(Constant.DATE, date);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private static BusViewModel obtainViewModel(AppCompatActivity application) {

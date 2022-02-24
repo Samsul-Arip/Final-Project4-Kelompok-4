@@ -23,9 +23,14 @@ public class ListRenewAdapter extends RecyclerView.Adapter<ListRenewAdapter.Rene
 
     private final ArrayList<ResponseBus> listOrder = new ArrayList<>();
     private final Context context;
+    private ItemClickListener clickListener;
 
     public ListRenewAdapter(Context context) {
         this.context = context;
+    }
+
+    public void setOnItemClickListener(ItemClickListener listener) {
+        clickListener = listener;
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -73,11 +78,14 @@ public class ListRenewAdapter extends RecyclerView.Adapter<ListRenewAdapter.Rene
             binding.tvRating.setText(data.getRating());
 
             binding.btnBookNow.setOnClickListener(view -> {
-                Intent intent = new Intent(context, DetailBusActivity.class);
-                intent.putExtra(Constant.ID, data.getIdBus());
-                intent.putExtra(Constant.NAME_DEPARTURE, data.getStartLocation());
-                context.startActivity(intent);
+                clickListener.setClicked(data);
             });
+
+
         }
+    }
+
+    public interface ItemClickListener {
+        void setClicked(ResponseBus bus);
     }
 }

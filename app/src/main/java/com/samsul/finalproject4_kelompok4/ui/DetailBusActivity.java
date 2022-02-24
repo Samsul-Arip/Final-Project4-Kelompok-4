@@ -58,7 +58,7 @@ public class DetailBusActivity extends AppCompatActivity {
             Intent i = new Intent(this, SeatActivity.class);
             i.putExtra(Constant.BUS_NAME, binding.tvNameBus.getText().toString());
             i.putExtra(Constant.START_LOCATION, binding.tvStartLocation.getText().toString());
-            i.putExtra(Constant.DATE, date);
+            i.putExtra(Constant.DATE, binding.tvStartDate.getText().toString());
             i.putExtra(Constant.END_LOCATION, binding.tvEndLocation.getText().toString());
             i.putExtra(Constant.START_TIME, binding.tvStartTime.getText().toString());
             i.putExtra(Constant.END_TIME, binding.tvEndTime.getText().toString());

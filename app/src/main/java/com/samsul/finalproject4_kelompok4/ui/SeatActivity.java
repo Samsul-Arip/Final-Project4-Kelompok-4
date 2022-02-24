@@ -406,12 +406,14 @@ public class SeatActivity extends AppCompatActivity {
         String totalTime = i.getStringExtra(Constant.TOTAL_TIME);
         String totalPrice = i.getStringExtra(Constant.TOTAL_PRICE);
         String totalClass = i.getStringExtra(Constant.CLASS_ECONOMY);
+        String date = i.getStringExtra(Constant.DATE);
 
         binding.btnBookNow.setOnClickListener(view -> {
             Intent intent = new Intent(this, CompleteBookingActivity.class);
             intent.putExtra(Constant.BUS_NAME, busName);
             intent.putExtra(Constant.START_LOCATION, startLocation);
             intent.putExtra(Constant.END_LOCATION, endLocation);
+            intent.putExtra(Constant.DATE, date);
             intent.putExtra(Constant.START_TIME, startTime);
             intent.putExtra(Constant.END_TIME, endTime);
             intent.putExtra(Constant.TOTAL_PRICE, totalPrice);
