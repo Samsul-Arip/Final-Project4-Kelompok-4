@@ -7,8 +7,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 import androidx.room.Update;
-
-import com.google.firebase.firestore.auth.User;
+import com.samsul.finalproject4_kelompok4.data.room.entity.Bus;
 import com.samsul.finalproject4_kelompok4.data.room.entity.Users;
 
 import java.util.List;
@@ -19,6 +18,15 @@ public interface DatabaseDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertUser(Users users);
 
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    void insertBus(Bus bus);
+
+    @Query("SELECT * FROM bus_table ORDER BY id ASC")
+    LiveData<List<Bus>> getBus();
+
+//    @Query("SELECT * FROM bus_table WHERE id = id")
+//    LiveData<Bus> getDetailOrder(String id);
+
     @Update
     void updateUser(Users users);
 
@@ -27,4 +35,6 @@ public interface DatabaseDao {
 
     @Query("SELECT * FROM users ORDER BY id ASC")
     LiveData<Users> getUsers();
+
+
 }

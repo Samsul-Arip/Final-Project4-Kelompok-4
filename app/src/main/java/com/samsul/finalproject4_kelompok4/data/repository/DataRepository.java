@@ -7,6 +7,7 @@ import com.samsul.finalproject4_kelompok4.data.remote.RemoteDataSource;
 import com.samsul.finalproject4_kelompok4.data.remote.model.ResponseBus;
 import com.samsul.finalproject4_kelompok4.data.remote.model.ResponseLocation;
 import com.samsul.finalproject4_kelompok4.data.room.LocalDataSource;
+import com.samsul.finalproject4_kelompok4.data.room.entity.Bus;
 import com.samsul.finalproject4_kelompok4.data.room.entity.Users;
 
 import java.util.List;
@@ -44,9 +45,25 @@ public class DataRepository implements DataSource {
     }
 
     @Override
+    public LiveData<List<Bus>> getBus() {
+        return localDataSource.getBus();
+    }
+
+//    @Override
+//    public LiveData<Bus> getDetailBus(String id) {
+//        return localDataSource.getDetailOrder(id);
+//    }
+
+    @Override
     public void insertUser(Users user) {
         executorService.execute(() -> localDataSource.insertUser(user));
     }
+
+    @Override
+    public void insertBus(Bus bus) {
+        executorService.execute(() -> localDataSource.insertBus(bus));
+    }
+
 
     @Override
     public void deleteUser(Users user) {

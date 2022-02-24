@@ -6,9 +6,16 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.samsul.finalproject4_kelompok4.data.room.entity.Bus;
 import com.samsul.finalproject4_kelompok4.data.room.entity.Users;
 
-@Database(entities = {Users.class}, version = 1)
+@Database(
+        entities = {
+                Users.class,
+                Bus.class},
+        version = 1,
+        exportSchema = false
+)
 public abstract class DatabaseDatabase extends RoomDatabase {
 
     public abstract DatabaseDao databaseDao();

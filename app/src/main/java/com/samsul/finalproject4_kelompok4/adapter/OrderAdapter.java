@@ -8,16 +8,18 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.samsul.finalproject4_kelompok4.data.ResponseOrder;
+import com.samsul.finalproject4_kelompok4.data.room.entity.Bus;
 import com.samsul.finalproject4_kelompok4.databinding.ItemOrderBinding;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder>{
 
-    private final ArrayList<ResponseOrder> listOrder = new ArrayList<>();
+    private final ArrayList<Bus> listOrder = new ArrayList<>();
 
     @SuppressLint("NotifyDataSetChanged")
-    public void setListOrder(ArrayList<ResponseOrder> list) {
+    public void setListOrder(List<Bus> list) {
         listOrder.clear();
         listOrder.addAll(list);
         notifyDataSetChanged();
@@ -50,9 +52,13 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
             this.binding = binding;
         }
 
-        public void bind(ResponseOrder data) {
-            binding.tvLocation.setText(data.getTerminalLocation());
-            binding.tvNameTerminal.setText(data.getNameTerminal());
+        @SuppressLint("SetTextI18n")
+        public void bind(Bus data) {
+            binding.tvLocation.setText(data.getStartLocation());
+            binding.tvNameTerminal.setText("Total time : " + data.getTotalTime());
+            binding.tvTime.setText(data.getStartTime());
+            binding.tvTglOrder.setText(data.getDate());
+            binding.tvNoTicket.setText(data.getId());
         }
     }
 }

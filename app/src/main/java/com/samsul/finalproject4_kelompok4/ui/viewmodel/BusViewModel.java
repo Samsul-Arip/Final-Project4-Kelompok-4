@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel;
 
 import com.samsul.finalproject4_kelompok4.data.remote.model.ResponseBus;
 import com.samsul.finalproject4_kelompok4.data.repository.DataRepository;
+import com.samsul.finalproject4_kelompok4.data.room.entity.Bus;
 
 import java.util.List;
 
@@ -19,4 +20,13 @@ public class BusViewModel extends ViewModel {
     public LiveData<List<ResponseBus>> getBus(String startLocation, String endLocation) {
         return dataRepository.getBus(startLocation, endLocation);
     }
+
+    public void insertBus(Bus bus) {dataRepository.insertBus(bus);}
+    public LiveData<List<Bus>> getBuses() {
+        return dataRepository.getBus();
+    }
+
+//    public LiveData<Bus> getDetailOrder(String id) {
+//        return dataRepository.getDetailBus(id);
+//    }
 }

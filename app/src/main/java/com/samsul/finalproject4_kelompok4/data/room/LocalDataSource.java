@@ -3,7 +3,10 @@ package com.samsul.finalproject4_kelompok4.data.room;
 import androidx.lifecycle.LiveData;
 
 import com.samsul.finalproject4_kelompok4.data.room.database.DatabaseDao;
+import com.samsul.finalproject4_kelompok4.data.room.entity.Bus;
 import com.samsul.finalproject4_kelompok4.data.room.entity.Users;
+
+import java.util.List;
 
 public class LocalDataSource {
 
@@ -40,4 +43,16 @@ public class LocalDataSource {
         //executorService.execute(() ->
         databaseDao.updateUser(users);
     }
+
+    public void insertBus(final Bus bus) {
+        databaseDao.insertBus(bus);
+    }
+
+    public LiveData<List<Bus>> getBus() {
+        return databaseDao.getBus();
+    }
+
+//    public LiveData<Bus> getDetailOrder(String id) {
+//        return databaseDao.getDetailOrder(id);
+//    }
 }
