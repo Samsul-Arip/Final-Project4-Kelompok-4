@@ -11,6 +11,7 @@ import com.samsul.finalproject4_kelompok4.ui.viewmodel.BusViewModel;
 import com.samsul.finalproject4_kelompok4.utils.Constant;
 import com.samsul.finalproject4_kelompok4.utils.Preferences;
 import com.samsul.finalproject4_kelompok4.utils.ViewModelFactory;
+import com.squareup.picasso.Picasso;
 
 public class DetailBusActivity extends AppCompatActivity {
 
@@ -47,7 +48,8 @@ public class DetailBusActivity extends AppCompatActivity {
                                 item.getTotalTime(),
                                 item.getBusClass(),
                                 seat,
-                                item.getPrince()
+                                item.getPrince(),
+                                item.getImageBus()
                                 );
                     }
                 }
@@ -81,7 +83,8 @@ public class DetailBusActivity extends AppCompatActivity {
                          String totalTime,
                          String economyClass,
                          double seat,
-                         String price
+                         String price,
+                         String image
                          ) {
         binding.tvNameBus.setText(nameBus);
         binding.tvRating.setText(rating);
@@ -95,6 +98,7 @@ public class DetailBusActivity extends AppCompatActivity {
         binding.tvCountBuy.setText(seat + "x" + price);
         double totalPrice = seat * Double.parseDouble(price);
         binding.tvResultPrice.setText("Rp. " + totalPrice + "K");
+        Picasso.get().load(image).into(binding.imgBus);
     }
 
     private static BusViewModel obtainViewModel(AppCompatActivity application) {
