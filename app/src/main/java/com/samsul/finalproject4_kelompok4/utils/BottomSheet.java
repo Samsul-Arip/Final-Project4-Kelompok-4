@@ -29,6 +29,7 @@ public class BottomSheet extends BottomSheetDialogFragment{
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = BottomSheetBinding.inflate(inflater, container, false);
+
         return binding.getRoot();
     }
 
@@ -45,16 +46,22 @@ public class BottomSheet extends BottomSheetDialogFragment{
             binding.tvCount.setText(String.valueOf((int) value));
         });
         binding.btnSelect.setOnClickListener(v ->{
+            fragmentListener.getValue(binding.tvCount.getText().toString());
             dismiss();
         });
+
         binding.btnCancel.setOnClickListener(v -> {
+            fragmentListener.getValue("Select");
             dismiss();
+
         });
-        fragmentListener.getValue(view);
+
+
+
     }
 
     public interface FragmentListener {
-        void getValue(View view);
+        void getValue(String text);
     }
 
 

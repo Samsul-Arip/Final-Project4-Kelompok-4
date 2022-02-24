@@ -3,7 +3,6 @@ package com.samsul.finalproject4_kelompok4.ui.fragment;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -68,7 +67,7 @@ public class SearchFragment extends Fragment implements BottomSheet.FragmentList
             String arrival = binding.tvArrival.getText().toString().trim();
             String passangers = binding.tvPasssangers.getText().toString().trim();
             String date = binding.tvDate.getText().toString().trim();
-            if(departure.equals("Select Departure") && arrival.equals("Select Arrival") && passangers.equals("Select") && date.equals("Select Date")) {
+            if(departure.equals("Select Departure,") || arrival.equals("Select Arrival,") || passangers.equals("Select") || date.equals("Select Date")) {
                 Toast.makeText(requireContext(), "Semua harus diisi", Toast.LENGTH_SHORT).show();
             } else {
                 Intent intent = new Intent(requireContext(), ListRenewActivity.class);
@@ -117,12 +116,7 @@ public class SearchFragment extends Fragment implements BottomSheet.FragmentList
     }
 
     @Override
-    public void getValue(View view) {
-        TextView value = view.findViewById(R.id.tv_count);
-        Button button = view.findViewById(R.id.btn_select);
-        button.setOnClickListener(v -> {
-            binding.tvPasssangers.setText(value.getText().toString());
-        });
-
+    public void getValue(String text) {
+        binding.tvPasssangers.setText(text);
     }
 }
