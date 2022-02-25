@@ -47,7 +47,7 @@ public class SetupPhoneActivity extends AppCompatActivity {
             users.setId(id);
             users.setName(name);
             users.setEmail(email);
-            users.setNo(Integer.parseInt(no));
+            users.setNo(no);
 
             viewModel.registerUser(users);
             startActivity(new Intent(SetupPhoneActivity.this, FinishRegistrationActivity.class));

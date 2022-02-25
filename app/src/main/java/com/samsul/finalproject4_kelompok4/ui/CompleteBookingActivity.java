@@ -89,6 +89,8 @@ public class CompleteBookingActivity extends AppCompatActivity {
             bus.setTotal_seat(String.valueOf(totalSeat));
             bus.setDate(date);
             bus.setImage(image);
+            bus.setNo(binding.tvPhoneNumber.getText().toString());
+            bus.setName(name);
             busViewModel.insertBus(bus);
             startActivity(new Intent(this, HomeActivity.class));
         });

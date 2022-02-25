@@ -1,13 +1,13 @@
 package com.samsul.finalproject4_kelompok4.adapter;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.samsul.finalproject4_kelompok4.data.ResponseOrder;
 import com.samsul.finalproject4_kelompok4.data.room.entity.Bus;
 import com.samsul.finalproject4_kelompok4.databinding.ItemOrderBinding;
 
@@ -17,6 +17,17 @@ import java.util.List;
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder>{
 
     private final ArrayList<Bus> listOrder = new ArrayList<>();
+    private final Context context;
+
+    public OrderAdapter(Context context) {
+        this.context = context;
+    }
+
+    ItemClickListener clickListener;
+
+    public void setItemClickListener(ItemClickListener listener) {
+        this.clickListener = listener;
+    }
 
     @SuppressLint("NotifyDataSetChanged")
     public void setListOrder(List<Bus> list) {
@@ -28,7 +39,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
     @NonNull
     @Override
     public OrderAdapter.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        ItemOrderBinding binding = ItemOrderBinding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        ItemOrderBinding binding = ItemOrderBinding.inflate(LayoutInflater.from(context), parent, false);
 
         return new OrderViewHolder(binding);
     }
@@ -60,6 +71,12 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
             binding.tvTime.setText(data.getStartTime());
             binding.tvTglOrder.setText(data.getDate());
             binding.tvNoTicket.setText(data.getId());
+            itemView.setOnClickListener(view ->  clickListener.itemClicked(data));
+
         }
+    }
+
+    public interface ItemClickListener {
+        void itemClicked(Bus data);
     }
 }

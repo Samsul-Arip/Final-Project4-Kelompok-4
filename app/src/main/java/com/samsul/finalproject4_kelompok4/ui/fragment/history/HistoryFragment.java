@@ -1,5 +1,6 @@
 package com.samsul.finalproject4_kelompok4.ui.fragment.history;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -14,13 +15,11 @@ import android.view.ViewGroup;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.samsul.finalproject4_kelompok4.adapter.OrderAdapter;
-import com.samsul.finalproject4_kelompok4.data.ResponseOrder;
 import com.samsul.finalproject4_kelompok4.databinding.FragmentHistoryBinding;
+import com.samsul.finalproject4_kelompok4.ui.DetailOrderActivity;
 import com.samsul.finalproject4_kelompok4.ui.viewmodel.BusViewModel;
+import com.samsul.finalproject4_kelompok4.utils.Constant;
 import com.samsul.finalproject4_kelompok4.utils.ViewModelFactory;
-
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class HistoryFragment extends Fragment {
 
@@ -44,7 +43,7 @@ public class HistoryFragment extends Fragment {
         BusViewModel busViewModel = new ViewModelProvider(this, (ViewModelProvider.Factory) factory).get(BusViewModel.class);
 //        auth = FirebaseAuth.getInstance();
 //        String id = Objects.requireNonNull(auth.getCurrentUser()).getUid();
-        OrderAdapter adapter = new OrderAdapter();
+        OrderAdapter adapter = new OrderAdapter(requireContext());
         binding.rvOrder.setHasFixedSize(true);
         binding.rvOrder.setLayoutManager(new LinearLayoutManager(requireActivity()));
         binding.rvOrder.setAdapter(adapter);
@@ -53,6 +52,12 @@ public class HistoryFragment extends Fragment {
             if(bus != null) {
                 adapter.setListOrder(bus);
             }
+        });
+
+        adapter.setItemClickListener(bus -> {
+            Intent intent = new Intent(requireContext(), DetailOrderActivity.class);
+            intent.putExtra(Constant.ID, bus.getId());
+            startActivity(intent);
         });
 
 

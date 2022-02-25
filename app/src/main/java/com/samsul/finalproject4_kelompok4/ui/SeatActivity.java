@@ -463,12 +463,10 @@ public class SeatActivity extends AppCompatActivity {
             intent.putExtra(Constant.TOTAL_SEAT, total);
             Constant.logCat("Total seat : ", String.valueOf(total));
             intent.putExtra(Constant.IMAGE, image);
-            if(total + 1 > Integer.parseInt(seat)) {
-                Toast.makeText(this, "Anda hanya pesan " + seat + " kursi...", Toast.LENGTH_LONG).show();
-            } else if(total + 1 < Integer.parseInt(seat)){
-                Toast.makeText(this, "Silahkan pilih " + seat + " kursi...", Toast.LENGTH_LONG).show();
-            } else {
+            if(total == Integer.parseInt(seat) || total == Integer.parseInt(seat)) {
                 startActivity(intent);
+            } else {
+                Toast.makeText(this, "Silahkan pilih " + seat + " kursi...", Toast.LENGTH_LONG).show();
             }
         });
 

@@ -2,7 +2,6 @@ package com.samsul.finalproject4_kelompok4.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
@@ -10,11 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.samsul.finalproject4_kelompok4.data.remote.model.ResponseBus;
-import com.samsul.finalproject4_kelompok4.ui.DetailBusActivity;
-import com.samsul.finalproject4_kelompok4.data.ResponseOrder;
 import com.samsul.finalproject4_kelompok4.databinding.ItemBusBinding;
-import com.samsul.finalproject4_kelompok4.databinding.ItemOrderBinding;
-import com.samsul.finalproject4_kelompok4.utils.Constant;
 
 import java.util.ArrayList;
 import java.util.List;

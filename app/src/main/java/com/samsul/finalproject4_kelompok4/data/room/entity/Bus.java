@@ -11,7 +11,7 @@ public class Bus {
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "id")
-    private String id;
+    private String id = "";
 
     @ColumnInfo(name = "bus_name")
     private String busName;
@@ -46,12 +46,34 @@ public class Bus {
     @ColumnInfo(name = "image")
     private String image;
 
+    @ColumnInfo(name = "phone_number")
+    private String no;
+
+    @ColumnInfo(name = "name_user")
+    private String name;
+
     public String getImage() {
         return image;
     }
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public String getNo() {
+        return no;
+    }
+
+    public void setNo(String no) {
+        this.no = no;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDate() {

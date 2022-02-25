@@ -25,8 +25,9 @@
         <TextView
             style="@style/TextViewPrimaryBlack.SemiBold"
             android:layout_gravity="center_horizontal"
-            android:text="Complete Booking"
-            android:textSize="16sp" />
+            android:text="Detail order"
+            android:textSize="16sp"
+            />
     </androidx.appcompat.widget.Toolbar>
 
     <TextView

@@ -21,10 +21,10 @@ public interface DatabaseDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insertBus(Bus bus);
 
-    @Query("SELECT * FROM bus_table")
+    @Query("SELECT * FROM bus_table ORDER BY id ASC")
     LiveData<List<Bus>> getBus();
 
-//    @Query("SELECT * FROM bus_table WHERE id = id")
+//    @Query("SELECT * FROM bus_table WHERE id = 1")
 //    LiveData<Bus> getDetailOrder(String id);
 
     @Update
