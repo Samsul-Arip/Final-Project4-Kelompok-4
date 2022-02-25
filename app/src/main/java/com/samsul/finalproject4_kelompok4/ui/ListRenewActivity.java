@@ -54,15 +54,14 @@ public class ListRenewActivity extends AppCompatActivity {
         binding.rvSearchBus.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         binding.rvSearchBus.setAdapter(adapter);
 
-        adapter.setOnItemClickListener(new ListRenewAdapter.ItemClickListener() {
-            @Override
-            public void setClicked(ResponseBus bus) {
-                Intent intent = new Intent(ListRenewActivity.this, DetailBusActivity.class);
-                intent.putExtra(Constant.ID, bus.getIdBus());
-                intent.putExtra(Constant.NAME_DEPARTURE, bus.getStartLocation());
-                intent.putExtra(Constant.DATE, date);
-                startActivity(intent);
-            }
+        adapter.setOnItemClickListener(bus -> {
+            Intent intent1 = new Intent(ListRenewActivity.this, DetailBusActivity.class);
+            intent1.putExtra(Constant.ID, bus.getIdBus());
+            intent1.putExtra(Constant.NAME_DEPARTURE, bus.getStartLocation());
+            intent1.putExtra(Constant.DATE, date);
+            intent1.putExtra(Constant.SEAT, seat);
+            Constant.logCat("Seat : ", seat);
+            startActivity(intent1);
         });
 
     }

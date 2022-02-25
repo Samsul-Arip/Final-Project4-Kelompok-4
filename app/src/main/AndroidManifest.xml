@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject4Kelompok4">
         <activity
+            android:name=".ui.DetailOrderActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.CompleteBookingActivity"
             android:exported="false" />
         <activity

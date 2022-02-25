@@ -55,6 +55,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         @SuppressLint("SetTextI18n")
         public void bind(Bus data) {
             binding.tvLocation.setText(data.getStartLocation());
+            binding.tvBusName.setText(data.getBusName());
             binding.tvNameTerminal.setText("Total time : " + data.getTotalTime());
             binding.tvTime.setText(data.getStartTime());
             binding.tvTglOrder.setText(data.getDate());

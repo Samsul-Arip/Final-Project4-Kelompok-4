@@ -1,5 +1,7 @@
 package com.samsul.finalproject4_kelompok4.utils;
 
+import android.util.Log;
+
 public class Constant {
 
     public final static String REQUEST_CODE = "request_code";
@@ -7,6 +9,7 @@ public class Constant {
     public final static String PASSANGERS = "passangers";
     public final static String ID = "id_bus";
     public final static String SEAT = "seat";
+    public final static String IMAGE = "image";
 
     public final static String NAME_DEPARTURE = "departure";
     public final static String NAME_TERMINAL_DEPARTURE = "terminal_departure";
@@ -23,6 +26,12 @@ public class Constant {
     public final static String BUS_NAME = "bus_name";
     public final static String TOTAL_PRICE = "total_price";
     public final static String TOTAL_SEAT = "total_seat";
+
+
+
+    public static void logCat(String Tag, String value) {
+        Log.d(Tag, value);
+    }
 
 
 }

@@ -44,6 +44,7 @@ public class CompleteBookingActivity extends AppCompatActivity {
         String totalPrice = i.getStringExtra(Constant.TOTAL_PRICE);
         String totalClass = i.getStringExtra(Constant.CLASS_ECONOMY);
         String date = i.getStringExtra(Constant.DATE);
+        String image = i.getStringExtra(Constant.IMAGE);
         int totalSeat = i.getIntExtra(Constant.TOTAL_SEAT, 0);
 
         auth = FirebaseAuth.getInstance();
@@ -71,6 +72,8 @@ public class CompleteBookingActivity extends AppCompatActivity {
         binding.tvPerSeat.setText(String.valueOf(totalSeat));
         binding.tvName.setText(name);
 
+
+
         binding.button.setOnClickListener(view -> {
             Bus bus = new Bus();
             bus.setId("No Bus. " + idBus + "JL I 0" + idBus);
@@ -82,9 +85,10 @@ public class CompleteBookingActivity extends AppCompatActivity {
             bus.setEndLocation(endLocation);
             bus.setEconomyClass(totalClass);
             bus.setTotalTime(totalTime);
-            bus.setTotal_price(totalPrice);
+            bus.setTotal_price(String.valueOf(totalPrice));
             bus.setTotal_seat(String.valueOf(totalSeat));
             bus.setDate(date);
+            bus.setImage(image);
             busViewModel.insertBus(bus);
             startActivity(new Intent(this, HomeActivity.class));
         });

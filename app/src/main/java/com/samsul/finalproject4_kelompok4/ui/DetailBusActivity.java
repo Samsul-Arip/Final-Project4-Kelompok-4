@@ -17,6 +17,9 @@ public class DetailBusActivity extends AppCompatActivity {
 
     ActivityDetailBusBinding binding;
     Preferences preferences;
+    String image;
+    double total = 0;
+    double seat = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +31,7 @@ public class DetailBusActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String startLocation = intent.getStringExtra(Constant.NAME_DEPARTURE);
         String date = intent.getStringExtra(Constant.DATE);
-        double seat = intent.getDoubleExtra(Constant.SEAT,1);
+        String seats = intent.getStringExtra(Constant.SEAT);
         String startTerminal = intent.getStringExtra(Constant.NAME_TERMINAL_DEPARTURE);
         String endTerminal = intent.getStringExtra(Constant.NAME_TERMINAL_ARRIVAL);
 
@@ -38,6 +41,11 @@ public class DetailBusActivity extends AppCompatActivity {
             if(bus != null) {
                 for(ResponseBus item: bus) {
                     if(item.getIdBus() == id) {
+                        total = Double.parseDouble(item.getPrince());
+                        Constant.logCat(DetailBusActivity.class.getName(), String.valueOf(total));
+                        seat = Double.parseDouble(String.valueOf(seats));
+                        Constant.logCat("Seat : ", seats);
+                        total = total * seat;
                         setData(item.getBusName(),
                                 item.getRating(),
                                 date,
@@ -48,10 +56,11 @@ public class DetailBusActivity extends AppCompatActivity {
                                 item.getTotalTime(),
                                 item.getBusClass(),
                                 seat,
-                                item.getPrince(),
+                                String.valueOf(total),
                                 item.getImageBus()
                                 );
                     }
+                    image = item.getImageBus();
                 }
             }
         });
@@ -67,6 +76,8 @@ public class DetailBusActivity extends AppCompatActivity {
             i.putExtra(Constant.TOTAL_TIME, binding.tvLongTime.getText().toString());
             i.putExtra(Constant.TOTAL_PRICE, binding.tvResultPrice.getText().toString());
             i.putExtra(Constant.CLASS_ECONOMY, binding.tvClass.getText().toString());
+            i.putExtra(Constant.SEAT, seats);
+            i.putExtra(Constant.IMAGE, image);
             startActivity(i);
         });
 
@@ -106,4 +117,5 @@ public class DetailBusActivity extends AppCompatActivity {
 
         return new ViewModelProvider(application, (ViewModelProvider.Factory) factory).get(BusViewModel.class);
     }
+
 }

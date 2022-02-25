@@ -43,6 +43,17 @@ public class Bus {
     @ColumnInfo(name = "date")
     private String date;
 
+    @ColumnInfo(name = "image")
+    private String image;
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     public String getDate() {
         return date;
     }
